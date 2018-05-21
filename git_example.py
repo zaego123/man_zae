@@ -1,3 +1,4 @@
+
 Git鼓励大量使用分支：
 查看分支：git branch
 创建分支：git branch <name>
@@ -6,8 +7,11 @@ Git鼓励大量使用分支：
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
 
-要关联一个远程库，使用命令git remote set-url origin git@server-name:path/repo-name.git；
-关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
+
+要关联一个远程库，使用命令git remote add(set-url) origin git@server-name:path/repo-name.git；
+关联后，使用命令git push -u origin master第一次推送master分支的所有内容；-u means guanlian, yihoubuyong
+when you want to connect a remote repository, the remote repository MUST be created empty!
+
 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
 分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作，而SVN在没有联网的时候是拒绝干活的！当有网络的时候，再把本地提交推送一下就完成了同步，真是太方便了！
 
